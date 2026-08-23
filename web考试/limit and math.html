@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Analysis Primer | Concept of Limit</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #2b2d42;
+      line-height: 1.6;
+    }
+    /* 1. Header / Navbar Navigation */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e9ecef;
+      padding: 15px 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { font-weight: 700; font-size: 1.1rem; color: #1a1a1a; letter-spacing: -0.5px; }
+    nav a { color: #6c757d; text-decoration: none; font-size: 0.85rem; margin-left: 20px; font-weight: 500; }
+    nav a:hover { color: #1a1a1a; }
+    
+    /* 2. Main Content Container */
+    main {
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 35px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+    h1 { font-size: 2rem; margin-bottom: 8px; color: #111; font-weight: 700; }
+    .subtitle { font-size: 0.9rem; color: #6c757d; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 12px; }
+    h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 12px; color: #1a1a1a; }
+    p { font-size: 0.95rem; color: #333; margin-bottom: 14px; text-align: justify; }
+
+    /* 3. Image Layout & Grid */
+    .img-grid { display: flex; gap: 15px; margin: 20px 0 10px 0; }
+    figure { flex: 1; margin: 0; }
+    img { width: 100%; height: 160px; object-fit: cover; border-radius: 6px; border: 1px solid #e9ecef; display: block; }
+    figcaption { font-size: 0.75rem; color: #868e96; text-align: center; margin-top: 6px; }
+
+    /* 4. Math Definition Block */
+    .math-card {
+      background: #f1f3f5;
+      border-left: 4px solid #2b2d42;
+      padding: 16px 20px;
+      border-radius: 0 6px 6px 0;
+      font-family: "Georgia", serif;
+      font-size: 0.95rem;
+      margin: 18px 0;
+    }
+    footer { text-align: center; padding: 25px; font-size: 0.8rem; color: #adb5bd; }
+  </style>
+</head>
+<body>
+
+  <!-- Site Navigation -->
+  <header>
+    <div class="logo">Analysis 101</div>
+    <nav>
+      <a href="#newton">Newton</a>
+      <a href="#zeno">Zeno</a>
+      <a href="#cauchy">Cauchy</a>
+    </nav>
+  </header>
+
+  <!-- Main Article Body -->
+  <main>
+    <article class="card">
+      <h1>The Evolution of Limit</h1>
+      <div class="subtitle">From physical intuition to the rigorous algebraic framework of modern real analysis.</div>
+
+      <!-- Section 1: Newton -->
+      <section id="newton">
+        <p>Sir Isaac Newton (1643–1727) was an English mathematician, physicist, and astronomer recognized as one of the most influential scientists of all time.</p>
+        <p>To solve fundamental physical problems regarding motion and gravity, Newton invented the <em>Method of Fluxions</em>, establishing an intuitive framework to describe continuous rates of change.</p>
+        
+        <div class="img-grid">
+          <figure>
+            <img src="ODL.webp" alt="Apple Tree" onerror="this.src='ODL.jpg'">
+            <figcaption>Apple tree at Woolsthorpe Manor</figcaption>
+          </figure>
+          <figure>
+            <img src="Newton.webp" alt="Sir Isaac Newton" onerror="this.src='Newton.jpg'">
+            <figcaption>Sir Isaac Newton</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Section 2: Zeno -->
+      <section id="zeno" style="margin-top: 35px;">
+        <h2>Zeno and the Tortoise</h2>
+        <p>Long before calculus was formalized, Zeno of Elea proposed the famous paradox of Achilles and the Tortoise. He argued that if the tortoise gets a head start, Achilles can never catch up, as he must first reach where the tortoise started.</p>
+        <p>This highlighted early conceptual difficulties with infinity: an infinite sequence of decreasing time intervals can indeed sum to a finite value.</p>
+        
+        <div class="img-grid" style="justify-content: center;">
+          <figure style="max-width: 65%;">
+            <img src="turtle.webp" alt="Zeno Paradox" style="height: auto;" onerror="this.src='turtle.png'; this.onerror=function(){this.src='turtle.jpg';}">
+            <figcaption>Visualizing Zeno's Infinite Steps</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Section 3: Cauchy -->
+      <section id="cauchy" style="margin-top: 35px;">
+        <h2>Cauchy and the ε-δ Language</h2>
+        <p>Augustin-Louis Cauchy (1789–1857) revolutionized analysis by replacing geometric motion with strict algebraic logic, formalizing the modern definition of a limit:</p>
+        
+        <div class="math-card">
+          Let $f(x)$ be defined near $c$. We say $\lim_{x \to c} f(x) = L$ if for every $\varepsilon > 0$, there exists a $\delta > 0$ such that whenever $0 < |x - c| < \delta$, then $|f(x) - L| < \varepsilon$.
+        </div>
+        
+        <p>Here, $\varepsilon$ represents target tolerance for $f(x)$, while $\delta$ sets the necessary closeness of $x$ to $c$.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer>
+    &copy; Foundation of Mathematics Series
+  </footer>
+
+</body>
+</html>
