@@ -2,49 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Math Foundations - Draft</title>
+  <title>Mathematics: Structural Foundations</title>
   <style>
-    body { font-family: sans-serif; padding: 20px; max-width: 700px; margin: auto; }
-    .card { display: flex; gap: 15px; border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
-    .card img { width: 120px; height: 90px; object-fit: cover; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+      background-color: #f9f9fa;
+      color: #222;
+      padding: 40px 20px; 
+      max-width: 760px; 
+      margin: auto; 
+      line-height: 1.6;
+    }
+    
+    h1 {
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 35px;
+      color: #111;
+      letter-spacing: -0.5px;
+    }
+
+    .card { 
+      display: flex; 
+      gap: 25px; 
+      background: #ffffff;
+      border: 1px solid #eaeaea; 
+      border-radius: 8px;
+      padding: 24px; 
+      margin-bottom: 20px; 
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+    }
+
+    .card img { 
+      width: 140px; 
+      height: 110px; 
+      object-fit: cover; 
+      border-radius: 6px;
+      border: 1px solid #f0f0f0;
+      flex-shrink: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin: 0 0 8px 0;
+      color: #1a1a1a;
+    }
+
+    .content p {
+      font-size: 0.95rem;
+      color: #495057;
+      margin: 0 0 14px 0;
+      text-align: justify;
+    }
+
+    .content a {
+      font-size: 0.9rem;
+      color: #0f62fe;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .content a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <h1>Mathematics</h1>
+  <h1>Pure Mathematics</h1>
 
   <div class="card">
-    <img src="OIP.webp" onerror="this.src='OIP.png'">
-    <div>
-      <h3>Calculus</h3>
-      <p>Study of continuous change.</p>
-      <a href="limit.html">Go to Limit Page</a>
+    <img src="OIP.webp" alt="Calculus" onerror="this.src='OIP.png'; this.onerror=function(){this.src='OIP.jpg';}">
+    <div class="content">
+      <h3>Calculus & Real Analysis</h3>
+      <p>The rigorous study of continuous change and accumulation. Transitioning from mechanical calculations to a solid foundation built on the formal $\epsilon-\delta$ limit definition and topological concepts.</p>
+      <!-- 链接已修改为你截图中的真实文件名 -->
+      <a href="limit and math.html">Explore Concept of Limit &rarr;</a>
     </div>
   </div>
 
   <div class="card">
-    <img src="OIP (1).webp" onerror="this.src='OIP (1).png'">
-    <div>
+    <img src="OIP (1).webp" alt="Linear Algebra" onerror="this.src='OIP (1).png'; this.onerror=function(){this.src='OIP (1).jpg';}">
+    <div class="content">
       <h3>Linear Algebra</h3>
-      <p>Vector spaces and matrices.</p>
-      <a href="#">Learn More</a>
+      <p>A structural, coordinate-free approach to vector spaces and linear maps. Focuses on linear operators, invariant subspaces, and dual spaces rather than mere computational matrices.</p>
+      <a href="#">Learn Vector Spaces &rarr;</a>
     </div>
   </div>
 
   <div class="card">
-    <img src="下载 (1).webp" onerror="this.src='下载 (1).png'">
-    <div>
+    <img src="下载 (1).webp" alt="Abstract Algebra" onerror="this.src='下载 (1).png'; this.onerror=function(){this.src='下载 (1).jpeg';}">
+    <div class="content">
       <h3>Abstract Algebra</h3>
-      <p>Groups, rings, and fields.</p>
-      <a href="#">Learn More</a>
+      <p>The study of algebraic structures such as groups, rings, and fields. Explores the profound symmetries in mathematics, naturally extending into the perspective of category theory.</p>
+      <a href="#">Learn Structural Algebra &rarr;</a>
     </div>
   </div>
 
   <div class="card">
-    <img src="下载.webp" onerror="this.src='下载.png'">
-    <div>
+    <img src="下载.webp" alt="Point-Set Topology" onerror="this.src='下载.png'; this.onerror=function(){this.src='下载.jpeg';}">
+    <div class="content">
       <h3>Point-Set Topology</h3>
-      <p>Continuous spatial relations.</p>
-      <a href="#">Learn More</a>
+      <p>The investigation of space and continuity at its most fundamental level. Deals with open sets, compactness, connectedness, and homeomorphisms, abstracting away geometric distances.</p>
+      <a href="#">Learn Topological Spaces &rarr;</a>
     </div>
   </div>
 </body>
