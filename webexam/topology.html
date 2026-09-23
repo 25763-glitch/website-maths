@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Point-Set Topology: The Abstraction of Space</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background-color: #f4f4f6; color: #222222; line-height: 1.6;
+      display: flex; justify-content: center; padding: 40px 20px;
+    }
+    .container {
+      background-color: #ffffff; width: 100%; max-width: 650px;
+      padding: 45px; border: 1px solid #e0e0e0; border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    h1 { text-align: center; font-size: 26px; font-weight: 600; margin-bottom: 25px; color: #111111; }
+    h2 { font-size: 18px; font-weight: 600; margin-top: 30px; margin-bottom: 10px; border-bottom: 1px solid #eeeeee; padding-bottom: 4px; }
+    p { font-size: 14.5px; margin-bottom: 12px; text-align: justify; }
+    .image-row { display: flex; gap: 15px; margin: 15px 0; justify-content: center; align-items: center; }
+    figure { flex: 1; margin: 0; }
+    img { width: 100%; height: auto; border-radius: 4px; border: 1px solid #e5e5e5; display: block; }
+    figcaption { font-size: 12px; color: #666666; text-align: center; margin-top: 5px; }
+    .math-box { background-color: #f8f9fa; border-left: 3px solid #333333; padding: 12px 16px; margin: 15px 0; font-family: "Georgia", serif; font-size: 14px; }
+    .back-btn { color: #0f62fe; text-decoration: none; font-size: 14px; font-weight: 600; display: inline-block; margin-bottom: 15px; }
+    .back-btn:hover { text-decoration: underline; }
+  </style>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-btn">&larr; Back to Home</a>
+    <h1>Point-Set Topology</h1>
+
+    <p>Topology investigates properties of space that are preserved under continuous deformations—such as stretching or bending—without tearing or gluing. It is the ultimate abstraction of geometry, discarding notions of rigid distance to focus entirely on limits and continuity.</p>
+
+    <h2>The Leap to Open Sets</h2>
+    <p>In calculus and metric spaces, continuity is defined using distances ($\epsilon$ and $\delta$). Felix Hausdorff (1868–1942) formulated a more abstract and powerful approach by defining spaces entirely through the concept of <strong>neighborhoods</strong> and <strong>open sets</strong>.</p>
+
+    <div class="image-row">
+      <figure style="flex: 1;">
+        <img src="豪斯多夫.webp" alt="Felix Hausdorff" onerror="this.src='豪斯多夫.png'; this.onerror=function(){this.src='豪斯多夫.jpg';}">
+        <figcaption>Felix Hausdorff</figcaption>
+      </figure>
+      <figure style="flex: 1.5;">
+        <img src="开集.webp" alt="Abstraction to Open Sets" onerror="this.src='开集.png'; this.onerror=function(){this.src='开集.jpg';}" style="object-fit: contain; background: #fff;">
+        <figcaption>Metric Space vs Topological Space</figcaption>
+      </figure>
+    </div>
+
+    <p>By declaring which subsets of a space are "open," we immediately inherit rigorous definitions for closed sets, compactness, connectedness, and continuous mappings, establishing the foundational language for modern mathematical analysis.</p>
+
+    <div class="math-box">
+      A <strong>Topological Space</strong> is a set $X$ along with a collection $\tau$ of subsets of $X$ (called open sets) such that:
+      <br><br>
+      1. Both $\emptyset$ and $X$ are in $\tau$.<br>
+      2. The union of any subcollection of sets in $\tau$ is in $\tau$.<br>
+      3. The intersection of any finite number of sets in $\tau$ is in $\tau$.
+    </div>
+  </div>
+</body>
+</html>

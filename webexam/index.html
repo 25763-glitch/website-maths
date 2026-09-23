@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>Core Mathematical Concepts</title>
+  <style>
+    /* 1. 基础页面：换成更现代的自带系统字体，背景微微发灰，让纯白卡片更明显 */
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background-color: #f4f5f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 2. 顶部导航栏：用简单的 flex 让左边标题和右边链接分开 */
+    .navbar {
+      background-color: #ffffff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.03); /* 导航栏底部的一丝丝阴影 */
+    }
+    .navbar .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .navbar a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #666;
+      font-size: 0.95rem;
+    }
+    .navbar a:hover {
+      color: #0078d4;
+    }
+
+    /* 3. 标题区域：居中留白 */
+    .hero {
+      text-align: center;
+      padding: 45px 20px 35px;
+    }
+    .hero h1 {
+      margin: 0 0 10px 0;
+      color: #111;
+      font-size: 2.2rem;
+    }
+    .hero p {
+      margin: 0;
+      color: #777;
+    }
+
+    /* 4. 卡片容器：限制宽度居中 */
+    .card-container {
+      max-width: 800px;
+      margin: 0 auto 50px auto; 
+    }
+
+    /* 5. 卡片本体：简单的左右排版 + 舒服的悬浮效果 */
+    .card {
+      display: flex;
+      background-color: #ffffff;
+      border-radius: 12px;                  /* 圆角边框 */
+      padding: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04); /* 柔和的底层阴影 */
+      /* 下面这一行是动画过渡效果，让悬浮变得丝滑 */
+      transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    }
+    
+    /* 鼠标放上去时的效果：向上移动 4 像素，阴影加深 */
+    .card:hover {
+      transform: translateY(-4px);          
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08); 
+    }
+
+    /* 6. 图片样式 */
+    .card img {
+      width: 200px;
+      height: 140px;
+      object-fit: cover;  /* 保证图片不被拉伸变形 */
+      border-radius: 8px; /* 图片也有小圆角 */
+      margin-right: 25px; /* 图片和右边文字的距离 */
+    }
+
+    /* 7. 卡片里的文字排版 */
+    .card-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* 文字垂直居中 */
+    }
+    .card-text h3 {
+      margin: 0 0 8px 0;
+      color: #222;
+      font-size: 1.3rem;
+    }
+    .card-text p {
+      margin: 0 0 15px 0;
+      color: #555;
+      line-height: 1.5;
+      font-size: 0.95rem;
+    }
+    .card-text a {
+      color: #0078d4;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .card-text a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <div class="navbar">
+    <div class="logo">Pure Mathematics</div>
+    <div>
+      <a href="limit and math.html">Calculus</a>
+      <a href="linear_algebra.html">Linear Algebra</a>
+      <a href="abstract.html">Abstract Algebra</a>
+      <a href="topology.html">Topology</a>
+    </div>
+  </div>
+
+  <!-- 大标题 -->
+  <div class="hero">
+    <h1>Core Mathematical Concepts</h1>
+    <p>Exploring the foundational structures bridging analysis and algebra.</p>
+  </div>
+
+  <!-- 卡片列表 -->
+  <div class="card-container">
+    
+    <div class="card">
+      <img src="OIP.webp" onerror="this.src='OIP.png'; this.onerror=null;">
+      <div class="card-text">
+        <h3>Calculus (微积分)</h3>
+        <p>The mathematical study of continuous change, encompassing differentiation and integration, built upon the rigorous foundations of limits.</p>
+        <a href="limit and math.html">Explore Concept of Limit &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="OIP (1).webp" onerror="this.src='OIP (1).png'; this.onerror=null;">
+      <div class="card-text">
+        <h3>Linear Algebra (线性代数)</h3>
+        <p>Focuses on vector spaces, linear transformations, and matrices—providing essential tools for geometric intuition and high-dimensional spaces.</p>
+        <a href="linear_algebra.html">Learn Linear Spaces &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="下载 (1).webp" onerror="this.src='下载 (1).png'; this.onerror=null;">
+      <div class="card-text">
+        <h3>Abstract Algebra (抽象代数)</h3>
+        <p>Examines algebraic structures such as groups, rings, and fields, formalizing symmetries and operations beyond classical arithmetic.</p>
+        <a href="abstract.html">Discover Group Theory &rarr;</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="下载.webp" onerror="this.src='下载.png'; this.onerror=null;">
+      <div class="card-text">
+        <h3>Point-Set Topology (点集拓扑)</h3>
+        <p>The pure abstraction of space, focusing purely on properties like open sets, continuity, and compactness without rigid distances.</p>
+        <a href="topology.html">Explore Topological Spaces &rarr;</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
